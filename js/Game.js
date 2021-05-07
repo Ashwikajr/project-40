@@ -58,25 +58,25 @@ class Game {
             // Differentiate the main player by printing
             // the name of the player on the basket. 
             if(index === player.index){
-                Fill("black");
-                textsize(25);
+                fill("red");
+                textize(25);
                 text(allPlayers[plr].name, x-25,y+25);
             }
         }
 
 
         // Give movements for the players using arrow keys
-        if (KeyIsDown(Right_Arrow) && player.index !== null) {
+        if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
             player.distance += 10
             player.update();
         }
-        if (KeyIsDown(left_Arrow) && player.index !== null) {
+        if (keyIsDown(LEFT_ARROW) && player.index !== null) {
             player.distance -= 10
             player.update();
         }
 
         // Create and spawn fruits randomly
-        if(framcount % 20 === 0) {
+        if(frameCount % 20 === 0) {
          fruits=createSprite(random(100,1000) ,0 ,100,100);
          fruits.velocityY = 6 ;
          var rand =Math.round(random(1,5));
