@@ -41,7 +41,7 @@ function draw() {
     clear();
     game.play();
   }
-  if(gamestate === 2){
+  if(gameState === 2){
     game.end();
   }
   if(playerCount === 2){
